@@ -19,13 +19,30 @@ CREATE TABLE cars(
   description TEXT NOT NULL
 ) default charset utf8;
 
+-- ERASE ENTIRE TABLE
 drop table cars;
 
 -- Create
 INSERT INTO cars
 (make, model, year, color, imgUrl, price, description)
 VALUES
-()
+();
 
 -- Get ALL
-SELECT * FROM cars
+SELECT * FROM cars;
+
+-- GET BY ID
+SELECT * FROM cars WHERE id =  
+
+-- ADD COLUMN TO TABLE AFTER CREATION
+ALTER TABLE cars
+add COLUMN mileage INT NOT NULL DEFAULT 0;
+
+-- ERASE ROWS
+DELETE FROM cars
+WHERE id = ''
+
+-- EDIT CAR 
+UPDATE cars
+set ''
+WHERE id = '' 
