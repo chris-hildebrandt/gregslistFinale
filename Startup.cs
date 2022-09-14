@@ -39,7 +39,8 @@ namespace gregslistFinale
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gregslistFinale", Version = "v1" });
             });
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
-            
+            services.AddTransient<CarsRepository>();
+            services.AddTransient<CarsServices>();
             services.AddScoped<AccountsRepository>();
             services.AddScoped<AccountService>();
         }
