@@ -40,7 +40,7 @@ namespace gregslistFinale
             });
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
             services.AddTransient<CarsRepository>();
-            services.AddTransient<CarsServices>();
+            services.AddTransient<CarsService>();
             services.AddScoped<AccountsRepository>();
             services.AddScoped<AccountService>();
         }
